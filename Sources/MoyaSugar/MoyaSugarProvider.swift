@@ -9,8 +9,8 @@ open class MoyaSugarProvider<Target: SugarTargetType>: MoyaProvider<Target> {
 
   override public init(
     endpointClosure: @escaping EndpointClosure = MoyaProvider.defaultEndpointMapping,
-    requestClosure: @escaping RequestClosure = MoyaProvider.defaultRequestMapping,
-    stubClosure: @escaping StubClosure = MoyaSugarProvider.neverStub,
+    requestClosure: @escaping RequestClosure = MoyaSugarProvider.defaultRequestMapping,
+    stubClosure: @escaping StubClosure = MoyaProvider.neverStub,
     callbackQueue: DispatchQueue? = nil,
     manager: Manager = MoyaProvider<Target>.defaultAlamofireManager(),
     plugins: [PluginType] = [],
